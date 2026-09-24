@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Hayk Tarverdyan · Economist, University College Dublin</title>
+<meta name="description" content="Hayk Tarverdyan, PhD candidate in Economics at University College Dublin. Research on household expectations, inflation, and monetary and macroprudential policy.">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>📈</text></svg>">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Spectral:ital,wght@0,400;0,600;1,400&family=Public+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --paper: #F6F7F8;
+    --ink: #1D2330;
+    --muted: #5A6272;
+    --rule: #D9DDE3;
+    --accent: #8E2C3C;      /* pomegranate */
+    --accent-soft: #F3E6E8;
+    --serif: "Spectral", Georgia, "Times New Roman", serif;
+    --sans: "Public Sans", system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --paper: #16191F;
+      --ink: #E6E8EC;
+      --muted: #A3AAB6;
+      --rule: #2E333C;
+      --accent: #E08A98;
+      --accent-soft: #2A1F23;
+    }
+  }
+  *, *::before, *::after { box-sizing: border-box; }
+  html { scroll-behavior: smooth; }
+  @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
+  body {
+    margin: 0;
+    background: var(--paper);
+    color: var(--ink);
+    font-family: var(--sans);
+    font-size: 17px;
+    line-height: 1.6;
+  }
+  a { color: var(--accent); text-underline-offset: 3px; text-decoration-thickness: 1px; }
+  a:hover { text-decoration-thickness: 2px; }
+  a:focus-visible, summary:focus-visible { outline: 2px solid var(--accent); outline-offset: 3px; border-radius: 2px; }
+
+  .wrap {
+    max-width: 1080px;
+    margin: 0 auto;
+    padding: 56px 28px 80px;
+    display: grid;
+    grid-template-columns: 280px 1fr;
+    gap: 72px;
+  }
+
+  /* Sidebar */
+  aside { position: sticky; top: 56px; align-self: start; }
+  .portrait {
+    width: 168px; height: 168px;
+    border-radius: 50%;
+    object-fit: cover;
+    display: block;
+    margin-bottom: 28px;
+    background: var(--accent-soft);
+  }
+  .initials {
+    width: 168px; height: 168px; border-radius: 50%;
+    display: none; place-items: center;
+    background: var(--accent-soft); color: var(--accent);
+    font-family: var(--serif); font-size: 56px;
+    margin-bottom: 28px;
+  }
+  h1 {
+    font-family: var(--serif);
+    font-weight: 400;
+    font-size: 44px;
+    line-height: 1.05;
+    letter-spacing: -0.01em;
+    margin: 0 0 14px;
+  }
+  .role { color: var(--muted); margin: 0 0 24px; font-size: 15.5px; line-height: 1.5; }
+  .contact { list-style: none; padding: 0; margin: 0 0 28px; font-size: 15px; }
+  .contact li { margin-bottom: 6px; }
+  nav ul { list-style: none; padding: 0; margin: 0; border-top: 1px solid var(--rule); }
+  nav li { border-bottom: 1px solid var(--rule); }
+  nav a {
+    display: block; padding: 9px 0;
+    color: var(--ink); text-decoration: none; font-size: 15px;
+  }
+  nav a:hover { color: var(--accent); }
+
+  /* Main */
+  main { max-width: 680px; }
+  section { margin-bottom: 64px; scroll-margin-top: 32px; }
+  h2 {
+    font-family: var(--serif);
+    font-weight: 600;
+    font-size: 28px;
+    margin: 0 0 24px;
+    padding-bottom: 10px;
+    border-bottom: 2px solid var(--ink);
+  }
+  h3 {
+    font-family: var(--sans);
+    font-size: 15px; font-weight: 600;
+    color: var(--muted);
+    margin: 36px 0 14px;
+  }
+  .about p { font-family: var(--serif); font-size: 19px; line-height: 1.7; margin: 0 0 16px; }
+
+  .paper { padding: 18px 0; border-bottom: 1px solid var(--rule); }
+  .paper:last-child { border-bottom: 0; }
+  .paper-title { font-family: var(--serif); font-size: 19px; font-weight: 600; line-height: 1.35; margin: 0 0 4px; }
+  .paper-meta { color: var(--muted); font-size: 15px; margin: 0; }
+  .paper-desc { font-size: 15.5px; margin: 8px 0 0; }
+  .paper-links { font-size: 15px; margin: 8px 0 0; display: flex; gap: 18px; flex-wrap: wrap; }
+  details { margin-top: 8px; font-size: 15.5px; }
+  summary { cursor: pointer; color: var(--accent); width: fit-content; }
+  details p { margin: 10px 0 0; padding-left: 14px; border-left: 2px solid var(--accent-soft); }
+
+  .entries { list-style: none; padding: 0; margin: 0; }
+  .entries li {
+    display: grid; grid-template-columns: 1fr auto; gap: 4px 24px;
+    padding: 12px 0; border-bottom: 1px solid var(--rule);
+  }
+  .entries li:last-child { border-bottom: 0; }
+  .entries .what { font-weight: 500; }
+  .entries .where { color: var(--muted); font-size: 15px; grid-column: 1; }
+  .entries .when { color: var(--muted); font-size: 15px; white-space: nowrap; grid-row: 1; grid-column: 2; font-variant-numeric: tabular-nums; }
+
+  .cv-link {
+    display: inline-block; padding: 10px 20px;
+    border: 1.5px solid var(--accent); border-radius: 4px;
+    text-decoration: none; font-weight: 500;
+  }
+  .cv-link:hover { background: var(--accent); color: var(--paper); }
+
+  footer { color: var(--muted); font-size: 14px; border-top: 1px solid var(--rule); padding-top: 18px; }
+
+  @media (max-width: 820px) {
+    .wrap { grid-template-columns: 1fr; gap: 40px; padding-top: 36px; }
+    aside { position: static; }
+    .portrait, .initials { width: 128px; height: 128px; }
+    .initials { font-size: 44px; }
+    h1 { font-size: 38px; }
+    nav ul { display: flex; flex-wrap: wrap; gap: 0 20px; border: 0; }
+    nav li { border: 0; }
+    nav a { padding: 4px 0; }
+  }
+  @media (max-width: 480px) {
+    .entries li { grid-template-columns: 1fr; }
+    .entries .when { grid-row: auto; grid-column: 1; }
+  }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <aside>
+    <!-- Put a square photo named photo.jpg next to this file. Until then, initials are shown. -->
+    <img class="portrait" src="photo.jpg" alt="Portrait of Hayk Tarverdyan"
+         onerror="this.style.display='none'; document.querySelector('.initials').style.display='grid';">
+    <div class="initials" aria-hidden="true">HT</div>
+
+    <h1>Hayk Tarverdyan</h1>
+    <p class="role">PhD candidate in Economics<br>University College Dublin</p>
+
+    <ul class="contact">
+      <li><a href="mailto:hayk.tarverdyan@ucdconnect.ie">hayk.tarverdyan@ucdconnect.ie</a></li>
+      <li><a href="Tarverdyan_CV.pdf">CV (PDF)</a></li>
+      <!-- Uncomment and fill in once you have these profiles:
+      <li><a href="https://scholar.google.com/citations?user=XXXX">Google Scholar</a></li>
+      <li><a href="https://orcid.org/0000-0000-0000-0000">ORCID</a></li>
+      <li><a href="https://github.com/YOUR-USERNAME">GitHub</a></li>
+      <li><a href="https://www.linkedin.com/in/YOUR-PROFILE">LinkedIn</a></li>
+      -->
+    </ul>
+
+    <nav aria-label="Sections">
+      <ul>
+        <li><a href="#about">About</a></li>
+        <li><a href="#research">Research</a></li>
+        <li><a href="#experience">Experience</a></li>
+        <li><a href="#teaching">Teaching</a></li>
+        <li><a href="#education">Education</a></li>
+      </ul>
+    </nav>
+  </aside>
+
+  <main>
+
+    <section id="about" class="about">
+      <h2>About</h2>
+      <p>I am a PhD candidate in Economics at University College Dublin. My research studies how households form expectations about inflation and the labor market, and how those expectations respond to news and monetary policy, using the ECB Consumer Expectations Survey.</p>
+      <p>Before my PhD, I spent nearly a decade in the Economic Research Department of the Central Bank of Armenia, working on monetary and macroprudential policy. I was a visiting scholar at Harvard University in 2018 and completed the Advanced Studies Program at the Kiel Institute for the World Economy.</p>
+    </section>
+
+    <section id="research">
+      <h2>Research</h2>
+
+      <h3>Work in progress</h3>
+
+      <div class="paper">
+        <p class="paper-title">The Inflation Attention Threshold in the Euro Area</p>
+        <p class="paper-desc">Estimates the level of inflation at which euro-area households start paying attention, using the ECB Consumer Expectations Survey, and shows that the attention regime shapes how supply shocks pass through to inflation.</p>
+      </div>
+
+      <div class="paper">
+        <p class="paper-title">Biased Labor Market Expectations across the Euro Area</p>
+        <p class="paper-desc">Uses households' job-finding and job-loss expectations in the ECB Consumer Expectations Survey to measure expectation bias across euro-area countries.</p>
+      </div>
+
+      <div class="paper">
+        <p class="paper-title">News, Narratives, and Household Expectations around ECB Announcements</p>
+        <p class="paper-desc">Builds daily measures of German-language news volume, sentiment, uncertainty and economic narratives, and links them to household expectations around ECB policy announcements.</p>
+      </div>
+
+      <h3>Working papers from the Central Bank of Armenia</h3>
+
+      <div class="paper">
+        <p class="paper-title">Foreign Exchange Interventions: Rule-Based Interventions Using High-Frequency Data</p>
+        <p class="paper-meta">2022</p>
+        <!-- To add an abstract or PDF, copy this block into any paper:
+        <details><summary>Abstract</summary><p>Your abstract here.</p></details>
+        <p class="paper-links"><a href="papers/fx_interventions.pdf">PDF</a></p>
+        -->
+      </div>
+
+      <div class="paper">
+        <p class="paper-title">Reserve Requirements in the Shade of the New Macroprudential Regulation Framework: De-Dollarization Policy Efficiency in Armenia</p>
+        <p class="paper-meta">with Ruben Gasparyan, 2019</p>
+      </div>
+
+      <div class="paper">
+        <p class="paper-title">Reserve Requirements and Bank-Loan Interest Rates</p>
+        <p class="paper-meta">2019</p>
+      </div>
+
+      <div class="paper">
+        <p class="paper-title">Macroprudential Tools and Monetary Policy: When Are They Optimal?</p>
+        <p class="paper-meta">2019</p>
+      </div>
+    </section>
+
+    <section id="experience">
+      <h2>Experience</h2>
+      <ul class="entries">
+        <li><span class="what">Research Consultant, Economic Research Department</span><span class="when">2026</span><span class="where">Central Bank of Armenia</span></li>
+        <li><span class="what">Research Economist, Economic Research Department</span><span class="when">2013–2023</span><span class="where">Central Bank of Armenia</span></li>
+        <li><span class="what">Visiting Scholar</span><span class="when">2018</span><span class="where">Harvard University</span></li>
+      </ul>
+    </section>
+
+    <section id="teaching">
+      <h2>Teaching</h2>
+      <ul class="entries">
+        <li><span class="what">Tutor: Principles of Macroeconomics, Intermediate Microeconomics, Introduction to Quantitative Economics, Introduction to Economics</span><span class="when">2023–present</span><span class="where">University College Dublin</span></li>
+        <li><span class="what">Teaching Assistant: Econometrics of Financial Markets, European Economy, Financial Economics</span><span class="when">2025</span><span class="where">Beijing-Dublin International College</span></li>
+        <li><span class="what">Visiting Lecturer: Microeconomics, Econometrics, Economic Growth</span><span class="when">2019–2022</span><span class="where">Yerevan State University, Ijevan Branch</span></li>
+      </ul>
+    </section>
+
+    <section id="education">
+      <h2>Education</h2>
+      <ul class="entries">
+        <li><span class="what">PhD in Economics</span><span class="when">2023–present</span><span class="where">University College Dublin</span></li>
+        <li><span class="what">Advanced Studies Program</span><span class="when">2021–2022</span><span class="where">Kiel Institute for the World Economy</span></li>
+        <li><span class="what">MSc in Management</span><span class="when">2015</span><span class="where">Yerevan State University</span></li>
+        <li><span class="what">BSc in Management</span><span class="when">2013</span><span class="where">Yerevan State University</span></li>
+      </ul>
+      <p style="margin-top:32px"><a class="cv-link" href="Tarverdyan_CV.pdf">Download full CV</a></p>
+    </section>
+
+    <footer>Last updated September 2026</footer>
+  </main>
+
+</div>
+</body>
+</html>
